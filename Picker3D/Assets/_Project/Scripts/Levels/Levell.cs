@@ -38,7 +38,7 @@ public class Levell : MonoBehaviour
         tempGO.SetActive(true);
         tempGO.transform.SetParent(this.gameObject.transform);
         currentStage = tempGO.GetComponent<Stagee>();
-        currentStage.santaLevel = this;
+        currentStage.levelSa = this;
     }
 
 
@@ -56,7 +56,7 @@ public class Levell : MonoBehaviour
             GameManager.Instance.resetPickerDatas();
         }
 
-        GameObject tempStage = Instantiate(stages[currentStageIndex], new Vector3(0, 0, currentStageIndex * GameManager.Instance.stageOffset), Quaternion.identity);
+        GameObject tempStage = Instantiate(stages[currentStageIndex], new Vector3(0, 0, (currentStageIndex * GameManager.Instance.stageOffset)), Quaternion.identity);
 
         return tempStage;
     }

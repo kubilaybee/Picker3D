@@ -343,6 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 898c135413feb6245ab3ad7ea36f0306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stage: {fileID: 0}
 --- !u!1 &573333194526024022
 GameObject:
   m_ObjectHideFlags: 0
@@ -547,7 +548,9 @@ MonoBehaviour:
   ScoreText: {fileID: 573333194980312271}
   IsStageComplete: 0
   IsStageFail: 0
-  santaLevel: {fileID: 0}
+  levelSa: {fileID: 0}
+  pickerStopper: {fileID: 573333194451196890}
+  Timer: 4
 --- !u!1 &573333194774343799
 GameObject:
   m_ObjectHideFlags: 0

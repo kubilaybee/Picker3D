@@ -54,6 +54,11 @@ public class GameManager : MonoBehaviour
         
     }
 
+    public void stageRestart(float nextPosZ)
+    {
+        picker.transform.position = new Vector3(0,0, nextPosZ);
+    }
+
     // stage fail 
     //public void resetStagePicker()
     //{
@@ -67,5 +72,6 @@ public class GameManager : MonoBehaviour
         picker.GetComponent<PickerMovement>().CharacterSpeed = 5;
         picker.GetComponent<PickerMovement>().TouchRotationSpeed = 1.2f;
         picker.GetComponent<PickerMovement>().forceToBall = false;
+        //picker.transform.position = Vector3.zero;
     }
 }

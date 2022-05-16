@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickerStopper : MonoBehaviour
 {
-    bool isEnable;
+    public bool isEnable;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -20,8 +20,9 @@ public class PickerStopper : MonoBehaviour
             other.gameObject.transform.parent.GetComponent<PickerMovement>().forceToBall=true;
             other.gameObject.transform.parent.GetComponent<PickerMovement>().CharacterSpeed = 0;
             other.gameObject.transform.parent.GetComponent<PickerMovement>().TouchRotationSpeed = 0;
+            //StartCoroutine(stage.checkStageFail());
             this.gameObject.GetComponent<BoxCollider>().enabled =false;
-            this.gameObject.SetActive(false);
+            //this.gameObject.SetActive(false);
         }
     }
 }

@@ -29,8 +29,11 @@ public class PickerMovement : MonoBehaviour
     {
         for (int i = 0; i < santCurrentBalls.currentBalls.Count; i++)
         {
-            // FORCE UYGULA SANTA
-            santCurrentBalls.currentBalls[i].GetComponent<Rigidbody>().AddForce(transform.forward*0.8f);
+            if (santCurrentBalls.currentBalls[i] != null)
+            {
+                // FORCE COLLECTABLE OBJ
+                santCurrentBalls.currentBalls[i].GetComponent<Rigidbody>().AddForce(transform.forward * 0.8f);
+            }
         } 
     }
 
@@ -56,7 +59,7 @@ public class PickerMovement : MonoBehaviour
             // delay
             velocityX = Mathf.Lerp(velocityX, deltaMousePos.x, 0.2f);
         }
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0))
         {
             // reset all position datas
             firstMousePos = Vector3.zero;
