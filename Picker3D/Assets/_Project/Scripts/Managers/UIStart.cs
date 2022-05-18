@@ -7,12 +7,11 @@ public class UIStart : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameManager.Instance.stopTheGame();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void startGame()
     {
-        
+        GameManager.Instance.changeGameState(GameManager.GameStates.GamePlay);
     }
 }

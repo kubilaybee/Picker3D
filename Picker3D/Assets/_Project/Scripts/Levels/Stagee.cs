@@ -55,6 +55,7 @@ public class Stagee : MonoBehaviour
         // increase the score 
         GameManager.Instance.score += TargetStageScore;
         levelSa.GenerateNextStage();
+        GameManager.Instance.changeGameState(GameManager.GameStates.LevelSuccess);
     }
 
     public void stageFail()
@@ -62,6 +63,8 @@ public class Stagee : MonoBehaviour
         //Debug.Log("FAIL");
         IsStageFail = true;
         IsStageComplete = false;
+        // change game state
+        GameManager.Instance.changeGameState(GameManager.GameStates.LevelFail);
         //restart stage funcs
         restartStage();
     }

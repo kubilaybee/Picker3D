@@ -20,6 +20,11 @@ public class UIManager : MonoBehaviour
     public List<UIElements> uIElements = new List<UIElements>();
     public Transform UIPanels;
 
+    private void Awake()
+    {
+        Instance = this;
+    }
+
     public void createUIElement(UIElementsID uIElement)
     {
         foreach (Transform item in UIPanels)

@@ -18,6 +18,8 @@ public class LevelManager : MonoBehaviour
     public void generateNextLevel()
     {
         currentLevelIndex++;
+        // add the gameManager level number
+        GameManager.Instance.currentLevelNumber++;
         Destroy(currentLevel.gameObject);
         if (currentLevelIndex == levels.Count)
         {
@@ -33,6 +35,7 @@ public class LevelManager : MonoBehaviour
 
     private void generateLevel()
     {
+        GameManager.Instance.currentLevelNumber = 1;
         GameObject tempGameObject = generateCurrentLevel();
         tempGameObject.SetActive(true);
         currentLevel = tempGameObject.GetComponent<Levell>();
