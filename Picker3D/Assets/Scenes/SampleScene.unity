@@ -162,6 +162,8 @@ MonoBehaviour:
   spawnRadius: 3
   stagePref: {fileID: 0}
   score: 0
+  levelSuccessPoint: 50
+  CurrentGameState: 0
 --- !u!4 &543675522
 Transform:
   m_ObjectHideFlags: 0
@@ -482,8 +484,54 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1284792015
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1284792016}
+  - component: {fileID: 1284792017}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1284792016
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284792015}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1284792017
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1284792015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ebc074121a86cd49ad496573e83fac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  CanvasElementsResourcePathName: 
+  uIElements: []
+  UIPanels: {fileID: 0}
 --- !u!1 &1738706734
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,6 +578,7 @@ MonoBehaviour:
   levels:
   - {fileID: 3316172906755059738, guid: dd5ffa61b07229d4ead0123859b784fd, type: 3}
   - {fileID: 3316172906755059738, guid: dd5ffa61b07229d4ead0123859b784fd, type: 3}
+  - {fileID: 7421054429031283690, guid: 6c969ff2f52c5a04ab429d0be38819cd, type: 3}
   currentLevelIndex: 0
   currentLevel: {fileID: 0}
   isLevelCompleted: 0
@@ -657,7 +706,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5282597670330660794
 MonoBehaviour:

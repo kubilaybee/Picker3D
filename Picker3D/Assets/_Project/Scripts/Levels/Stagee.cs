@@ -12,6 +12,8 @@ public class Stagee : MonoBehaviour
     public bool IsStageFail;
     public Levell levelSa;
     public GameObject pickerStopper;
+    // bool start ilk top deðdiðinde true olur
+    private bool startCheck=true;
     // timer
     public float Timer = 4f;
     //public Coroutine checkFailCor;
@@ -23,7 +25,11 @@ public class Stagee : MonoBehaviour
             // devam etmek istyorsanýz týklayýn debug
             return;
         }
-        StartCoroutine(checkStageFail());
+        // start check stage
+        if (startCheck)
+        {
+            StartCoroutine(checkStageFail());
+        }
         //checkFailCor=StartCoroutine(checkStage());
         CurrentStageScore++;
         updateScore();
@@ -34,8 +40,11 @@ public class Stagee : MonoBehaviour
             //StopCoroutine(checkFailCor);    // stop coroutine
             stageSuccess();
         }
+    }
 
-
+    void startCheckChange()
+    {
+        startCheck = !startCheck;
     }
 
     public void stageSuccess()
@@ -43,6 +52,8 @@ public class Stagee : MonoBehaviour
         //StopCoroutine(checkFailCor);    // stop coroutine
         IsStageComplete = true;
         IsStageFail = false;
+        // increase the score 
+        GameManager.Instance.score += TargetStageScore;
         levelSa.GenerateNextStage();
     }
 
@@ -61,6 +72,7 @@ public class Stagee : MonoBehaviour
             Debug.Log("FAIL");
             GameManager.Instance.stageRestart(levelSa.currentStage.transform.position.z);
             Timer = 4f;
+            startCheckChange();
             pickStopperDatas();
             IsStageFail = false;
         }
@@ -103,10 +115,13 @@ public class Stagee : MonoBehaviour
 
     public IEnumerator checkStageFail()
     {
+        // if bol global true ise return le
+        startCheckChange();
         Timer = 4f;// GLOBAL DEGISKENE ATILMALI
         // HER TOP BASARILI SEKILDE GIRDIGINDA TIMER = 4 YAPILACAK
         while (Timer>=0)
         {
+
             if (!IsStageComplete)
             {
                 Debug.Log(Timer);

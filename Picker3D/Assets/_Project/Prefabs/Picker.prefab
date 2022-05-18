@@ -108,7 +108,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06a0a8afe05ced94d85318f237d4ee4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentBalls: []
+  currentBalls: []
 --- !u!1 &8025117852876532626
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,8 +297,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 8, z: 1}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Size: {x: 2.9688587, y: 8, z: 1}
+  m_Center: {x: -0.48442888, y: 2, z: 0}
 --- !u!1 &8025117853520518636
 GameObject:
   m_ObjectHideFlags: 0
@@ -636,11 +636,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2665d665a421f5b4c9804f612a4db8d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CharacterSpeed: 7
+  CharacterSpeed: 8
   TouchRotationSpeed: 0.5
   xMinLimit: -3
   xMaxLimit: 3
   santCurrentBalls: {fileID: 7247279598767125203}
+  forceToBall: 0
 --- !u!54 &5550373779679644499
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -750,8 +751,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 8, z: 1}
-  m_Center: {x: 0, y: 2, z: 0}
+  m_Size: {x: 3.2989957, y: 8, z: 1}
+  m_Center: {x: 0.6494977, y: 2, z: 0}
 --- !u!1 &8025117854394232361
 GameObject:
   m_ObjectHideFlags: 0
