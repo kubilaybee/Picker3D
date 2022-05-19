@@ -65,8 +65,6 @@ public class Stagee : MonoBehaviour
         IsStageComplete = false;
         // change game state
         GameManager.Instance.changeGameState(GameManager.GameStates.LevelFail);
-        //restart stage funcs
-        restartStage();
     }
     public void restartStage()
     {

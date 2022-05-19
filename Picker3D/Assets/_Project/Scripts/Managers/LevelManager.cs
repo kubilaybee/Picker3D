@@ -5,10 +5,17 @@ using System;
 
 public class LevelManager : MonoBehaviour
 {
+    public static LevelManager Instance;
+
     public List<GameObject> levels = new List<GameObject>();
     public int currentLevelIndex;
     public Levell currentLevel;
     public bool isLevelCompleted;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     private void Start()
     {

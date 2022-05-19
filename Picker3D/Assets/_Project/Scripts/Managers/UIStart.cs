@@ -12,6 +12,7 @@ public class UIStart : MonoBehaviour
 
     public void startGame()
     {
+        GameManager.Instance.saveGameDatas();
         GameManager.Instance.changeGameState(GameManager.GameStates.GamePlay);
     }
 }

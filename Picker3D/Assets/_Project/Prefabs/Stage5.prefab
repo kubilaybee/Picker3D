@@ -343,7 +343,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 898c135413feb6245ab3ad7ea36f0306, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stage: {fileID: 0}
+  isEnable: 0
 --- !u!1 &573333194526024022
 GameObject:
   m_ObjectHideFlags: 0
@@ -1283,6 +1283,7 @@ MonoBehaviour:
   generateCount: 0
   spawnRadius: 0
   currentStage: {fileID: 573333194714173831}
+  spawnNumber: 2
 --- !u!1 &3838042551324155768
 GameObject:
   m_ObjectHideFlags: 0
@@ -1329,6 +1330,7 @@ MonoBehaviour:
   generateCount: 0
   spawnRadius: 0
   currentStage: {fileID: 573333194714173831}
+  spawnNumber: 4
 --- !u!1 &3838042551431129175
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1377,7 @@ MonoBehaviour:
   generateCount: 0
   spawnRadius: 0
   currentStage: {fileID: 573333194714173831}
+  spawnNumber: 3
 --- !u!1 &3838042551835354514
 GameObject:
   m_ObjectHideFlags: 0
@@ -1455,3 +1458,4 @@ MonoBehaviour:
   generateCount: 0
   spawnRadius: 0
   currentStage: {fileID: 573333194714173831}
+  spawnNumber: 0

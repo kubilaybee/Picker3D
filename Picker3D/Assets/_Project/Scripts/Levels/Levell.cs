@@ -67,6 +67,8 @@ public class Levell : MonoBehaviour
         // level success
         isLevelSuccess = true;
         GameManager.Instance.score += GameManager.Instance.levelSuccessPoint;
+        GameManager.Instance.currentLevelNumber++;
+        GameManager.Instance.saveGameDatas();
         levelMng.generateNextLevel();
     }
 

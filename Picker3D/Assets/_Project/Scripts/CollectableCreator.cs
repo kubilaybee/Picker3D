@@ -23,7 +23,7 @@ public class CollectableCreator : MonoBehaviour
 
         if (!collectablesTransformComplete)
         {
-            if (GameManager.Instance.poolObjectList.Count == generateCount)
+            if (GameManager.Instance.poolObjectList.Count > generateCount)
             {
                 generateCollectables();
             }
@@ -33,12 +33,13 @@ public class CollectableCreator : MonoBehaviour
     void generateCollectables()
     {
         collectablesTransformComplete = !collectablesTransformComplete;
-        // POOL ** must fix most ball
-        for (int i = 0; i < generateCount*4; i++)
+        // POOL ** completed
+        for (int i = 0; i < generateCount; i++)
         {
             Debug.Log("COLLECTABLES");
-            //GameObject tempSphere = GameManager.Instance.poolObjectList[i];
-            GameObject tempSphere = Instantiate(GameManager.Instance.CollectablePrefab);
+            GameObject tempSphere = GameManager.Instance.poolObjectList[i];
+            GameManager.Instance.poolObjectList.RemoveAt(i);
+            //GameObject tempSphere = Instantiate(GameManager.Instance.CollectablePrefab);
             Vector3 tempSpawnPos = UnityEngine.Random.insideUnitSphere * spawnRadius;
             Vector3 SpawnPos = new Vector3(tempSpawnPos.x, 0.5f, tempSpawnPos.z);
             tempSphere.transform.position = SpawnPos + transform.position;

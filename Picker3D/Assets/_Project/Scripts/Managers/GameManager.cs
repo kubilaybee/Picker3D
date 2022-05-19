@@ -8,6 +8,12 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    #region SaveMechanic
+    [Header("Score Save Mechanic")]
+    public GameDatas gameDatas;
+
+    #endregion
+
     #region Picker
     [Header("Picker Datas")]
     public GameObject pickerPref;
@@ -143,11 +149,18 @@ public class GameManager : MonoBehaviour
 
     public void setScoreTxt(Text scoreText)
     {
-        scoreText.text = "Score: " + score;
+        // setText 
+        scoreText.text = "Score: " + gameDatas.Score;
     }
 
     public void setLevelTxt(Text levelText)
     {
-        levelText.text = "LEVEL - " + currentLevelNumber;
+        levelText.text = "LEVEL - " + gameDatas.Level ;
+    }
+
+    public void saveGameDatas()
+    {
+        gameDatas.Level = currentLevelNumber;
+        gameDatas.Score = score;
     }
 }

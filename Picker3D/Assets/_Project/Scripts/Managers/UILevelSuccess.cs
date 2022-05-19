@@ -14,6 +14,7 @@ public class UILevelSuccess : MonoBehaviour
     }
     public void nextStage()
     {
+        GameManager.Instance.saveGameDatas();
         GameManager.Instance.changeGameState(GameManager.GameStates.GamePlay);
     }
 }

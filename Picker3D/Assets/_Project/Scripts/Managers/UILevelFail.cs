@@ -15,6 +15,8 @@ public class UILevelFail : MonoBehaviour
 
     public void restartGame()
     {
+        //restart stage funcs
+        LevelManager.Instance.currentLevel.currentStage.restartStage();
         GameManager.Instance.changeGameState(GameManager.GameStates.GamePlay);
     }
 }

@@ -152,6 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2c8b506d7d66684d899fd96652f088c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameDatas: {fileID: 11400000, guid: 606631c2335324a42a5a204c05432a8e, type: 2}
   pickerPref: {fileID: 8025117854048076234, guid: adc4de7b7ef056e49b8d754c543c8b05, type: 3}
   picker: {fileID: 0}
   cineMachineVirtualCam: {fileID: 562841154}
